@@ -23,4 +23,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Type ArrayList"/>
+    <Button
+        android:id="@+id/buttonObject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type Object"/>
 </LinearLayout>

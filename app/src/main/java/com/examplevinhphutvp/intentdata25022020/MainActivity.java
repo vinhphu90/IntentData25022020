@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
-    Button mBtnString , mBtnArray,mBtnArrayList;
+    Button mBtnString , mBtnArray,mBtnArrayList,mBtnObject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnString = findViewById(R.id.buttonString);
         mBtnArray = findViewById(R.id.buttonArray);
         mBtnArrayList = findViewById(R.id.buttonArrayList);
+        mBtnObject = findViewById(R.id.buttonObject);
 
         mBtnString.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,5 +51,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        mBtnObject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Animal meo = new Animal();
+                meo.Name="con meo";
+                meo.Weight= 2 ;
+                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                intent.putExtra("Object", meo);
+                startActivity(intent);
+            }
+        });
+
     }
 }
