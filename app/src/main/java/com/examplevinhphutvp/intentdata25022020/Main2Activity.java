@@ -28,8 +28,8 @@ public class Main2Activity extends AppCompatActivity {
 //            Log.d("BBB",  arrayList.size() + "");
 //        }
         if (intent != null){
-            Animal meo = intent.getParcelableExtra("Object");
-            Log.d("BBB",  meo.Weight + "");
+            ArrayList<Animal> meo = intent.getParcelableArrayListExtra("Object");
+            Log.d("BBB",  meo.size() + "");
         }
     }
 }
