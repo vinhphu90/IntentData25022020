@@ -23,17 +23,17 @@ public class Main2Activity extends AppCompatActivity {
 //            String [] arrayStrings = intent.getStringArrayExtra("array");
 //            Log.d("BBB", arrayStrings.length + "");
 //        }
-//        if (intent != null){
-//            ArrayList<String> arrayList = intent.getStringArrayListExtra("arraylist");
-//            Log.d("BBB",  arrayList.size() + "");
-//        }
+        if (intent != null){
+            ArrayList<String> arrayList = intent.getStringArrayListExtra("arraylist");
+            Log.d("BBB",  arrayList.size() + "");
+        }
 //        if (intent != null){
 //            ArrayList<Animal> meo = intent.getParcelableArrayListExtra("Object");
 //            Log.d("BBB",  meo.size() + "");
 //        }
-        if (intent != null){
-           Business business = (Business) intent.getSerializableExtra("serializable");
-            Log.d("BBB", business .Name + "");
-        }
+//        if (intent != null){
+//           Business business = (Business) intent.getSerializableExtra("serializable");
+//            Log.d("BBB", business .Name + "");
+//        }
     }
 }
