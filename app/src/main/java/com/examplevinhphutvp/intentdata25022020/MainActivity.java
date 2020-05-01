@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
-    Button mBtnString , mBtnArray,mBtnArrayList,mBtnObject;
+    Button mBtnString , mBtnArray,mBtnArrayList,mBtnObject, mBtnSerializable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnArray = findViewById(R.id.buttonArray);
         mBtnArrayList = findViewById(R.id.buttonArrayList);
         mBtnObject = findViewById(R.id.buttonObject);
+        mBtnSerializable = findViewById(R.id.buttonSerializable);
 
         mBtnString.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +62,17 @@ public class MainActivity extends AppCompatActivity {
                 animals.add(meo);
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                 intent.putExtra("Object",animals );
+                startActivity(intent);
+            }
+        });
+        mBtnSerializable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Business business = new Business();
+                business.address = "Quan 1";
+                business.Name = "Cong ty trach nhiem huu han 1 thanh vien";
+                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                intent.putExtra("serializable",business );
                 startActivity(intent);
             }
         });
